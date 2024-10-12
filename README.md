@@ -19,6 +19,7 @@ DB_ENDPOINT=<db_endpoint> DB_PORT=5432 DB_USER=<user> DB_PASS=<password> DB_NAME
 ```
 
 ## Use program examples
+
 ```sh
 curl "http://localhost:8080/ping?url=https://google.com" --header "Content-Type:application/text"
 curl -X POST "http://localhost:8080/video?id=1&title=Forest_Gump"
