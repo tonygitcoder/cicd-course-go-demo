@@ -1,7 +1,9 @@
-temp.sh
+.env
 env.sh
-*.tfvars
+temp.sh
+
 .terraform/
+.terraform.lock.hcl
+*.tfvars
 *.tfstate
 *.tfstate.*
-.terraform.lock.hcl
