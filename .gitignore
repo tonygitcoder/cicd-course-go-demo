@@ -1,6 +1,7 @@
 .env
 env.sh
 temp.sh
+/tmp
 
 .terraform/
 .terraform.lock.hcl
