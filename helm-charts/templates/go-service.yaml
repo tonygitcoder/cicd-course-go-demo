@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: silly-demo
+spec:
+  selector:
+    app: silly-demo
+  ports:
+    - protocol: TCP
+      port: {{ .Values.sillyDemo.port }}
+      targetPort: {{ .Values.sillyDemo.port }}

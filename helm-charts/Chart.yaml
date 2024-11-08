@@ -1,0 +1,6 @@
+apiVersion: v2
+name: silly-demo-helm-chart
+description: silly-demo + postgres + nginx helm chart
+version: 1.0.0
+appVersion: "1.0.0"
+

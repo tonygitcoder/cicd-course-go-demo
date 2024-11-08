@@ -1,0 +1,16 @@
+sillyDemo:
+  image: yhvd11/silly-demo:latest
+  port: 8080
+  db:
+    endpoint: db
+    port: 5432
+
+nginx:
+  image: nginx:latest
+  port: 80
+  configPath: /etc/nginx/nginx.conf
+
+postgresql:
+  image: postgres:latest
+  port: 5432
+  storage: 1Gi
