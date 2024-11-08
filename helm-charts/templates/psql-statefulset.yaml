@@ -37,7 +37,23 @@ spec:
           volumeMounts:
             - name: db-data
               mountPath: /var/lib/postgresql/data
+            - name: init-sql
+              mountPath: /docker-entrypoint-initdb.d
+          lifecycle:
+            postStart:
+              exec:
+                command: [
+                  "sh", "-c", "
+                  until psql -h localhost -U \"$POSTGRES_USER\" -d \"$POSTGRES_DB\" -f /docker-entrypoint-initdb.d/init.sql; do
+                    echo \"Waiting for PostgreSQL to be ready...\";
+                    sleep 2;
+                  done
+                  "
+                ]
       volumes:
         - name: db-data
           persistentVolumeClaim:
             claimName: db-pvc
+        - name: init-sql
+          configMap:
+            name: db-init-sql

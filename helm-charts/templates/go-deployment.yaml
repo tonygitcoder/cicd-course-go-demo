@@ -20,7 +20,7 @@ spec:
             - containerPort: {{ .Values.sillyDemo.port }}
           env:
             - name: DB_ENDPOINT
-              value: {{ .Values.sillyDemo.db.endpoint }}
+              value: db
             - name: DB_PORT
               value: "{{ .Values.sillyDemo.db.port }}"
             - name: DB_USER
