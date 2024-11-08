@@ -1,7 +1,6 @@
 variable "db_name" {
   description = "Name of the PostgreSQL DB"
   type        = string
-
 }
 
 variable "db_username" {
